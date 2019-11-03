@@ -30,12 +30,11 @@ sourceSets {
 
 sourceSets {
     main {
-        compileClasspath = compileClasspath + files(api.output.
-                classesDir)
+        compileClasspath = compileClasspath + files(api.output.classesDir)
     }
     test {
-        runtimeClasspath = runtimeClasspath + files(api.output.
-                classesDir)
+        compileClasspath = compileClasspath + files(api.output.classesDir)
+        runtimeClasspath = runtimeClasspath + files(api.output.classesDir)
     }
 }
 
